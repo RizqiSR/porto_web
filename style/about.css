@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+
+:root {
+  /* Dark Mode */
+  --main-bg-color: #050010;
+  --secondary-bg-color: #473863;
+  --main-text-color: #fff;
+  --nonactive-nav-text: #afafaf;
+  --gradient-color: linear-gradient(130deg, #6534f0, #fa5560);
+  --gradient-text-bg: linear-gradient(
+    81.02deg,
+    #b14bf4 -39.48%,
+    #4d91ff 130.8%
+  );
+  --title-text-margin: 8px 0;
+  --main-padding: 30px;
+  --main-title-fontsize: 28px;
+  --secondary-title-fontsize: 32px;
+  --tersier-title-fontsize: 22px;
+  --paragraph-fontsize: 16px;
+  --button-height: 40px;
+  --button-width: 48;
+  --button-text-fontsize: 14px;
+  --button-text-fontweigth: semibold;
+  --button-icon-width: 24px;
+  --button-icon-text-margin: 8px;
+  --button-padding: 8px 24px;
+  --button-box-radius: 3px;
+  --icon-size: 24px;
+  --icon-padding: 44px;
+  --section-margin-bottom: 60px;
+  --sidebar-contents-width: 192px;
+  --sidebar-contents-margin: 16px;
+  --sidebar-padding: 24px;
+  --sidebar-margin-right: 24px;
+  --sidebar-logo-size: 32px;
+  --sidebar-icon-size: 24px;
+  --sidebar-icon-margin: 12px 0;
+  --status-error-color: #ff3b3c;
+  --status-warning-color: #ffad30;
+  --status-information-color: #0063f7;
+  --status-success-color: #3ac148;
+
+  /* Light Mode */
+  --light-mode-bg: #f5f8ff;
+}
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--main-text-color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+/* --- Navbar --- */
+.navbar {
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--main-padding);
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 1px 50px 1px var(--main-bg-color);
+  position: sticky;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.68);
+  /* -webkit-backdrop-filter: blur(10px); */
+  backdrop-filter: blur(44px);
+}
+
+.logo-side {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.logo-side i {
+  font-size: 40px;
+  line-height: 70px;
+
+  /* setting font color: linear gradient */
+  background: var(--gradient-color);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.logo-side h1 {
+  font-size: var(--tersier-title-fontsize);
+  letter-spacing: 4px;
+}
+
+.logo-side h1 span {
+  font-size: 23px;
+  background: var(--gradient-color);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.nav {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  column-gap: 50px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--nonactive-nav-text);
+}
+/* --- Navbar --- */
+
+/* .material-symbols-outlined {
+    font-size: 100px;
+} */
+
+.resume {
+  margin: 0 auto;
+  width: 900px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  /* column-gap: 100px; */
+  filter: drop-shadow(0px -30px 60px #b14bf4);
+  /* position: absolute; */
+  background-color: var(--main-bg-color);
+  /* border: 1px solid red; */
+}
+
+
+/* --- Profile --- */
+.profile {
+  /* height: 1800px; */
+  width: 300px;
+  padding: var(--main-padding);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.profile img {
+  width: 250px;
+  border-radius: 100%;
+  background-color: #361a83;
+  /* border: 1px solid red; */
+}
+
+.profile .education {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile .skill {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.profile .skill ul li {
+  margin-bottom: 8px;
+}
+
+.profile .contacts,
+.language {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* border: 1px solid red; */
+}
+/* --- Akhir Profile --- */
+
+/* --- Experiences --- */
+.experiences {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  /* gap: 50px; */
+  background: #361a83;
+  border-radius: 30px;
+  /* border: 1px solid yellow; */
+}
+
+.experiences .nama {
+  text-align: center;
+  font-size: var(--main-title-fontsize);
+  /* border: 1px solid red; */
+}
+
+.nama h1 {
+  /* margin-top: 90px; */
+  height: 80px;
+}
+
+.about-me {
+  margin-top: 33px;
+}
+
+.about-me p {
+  margin-bottom: 73px;
+}
+
+.activity-experience {
+  margin-bottom: 20px;
+}
+
+.about-me, .activity-experience {
+  padding: 0 var(--main-padding);
+  /* border: 1px solid red; */
+
+  text-align: justify;
+}
+/* --- Akhir Experiences --- */
+
+
+/* --- Footer --- */
+footer {
+  height: fit-content;
+  padding: var(--main-padding);
+  text-align: center;
+  background-color: black;
+  /* border: 1px solid red; */
+}
+
+.footer-nav {
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-nav li a {
+  text-decoration: none;
+}
+/* --- Footer --- */

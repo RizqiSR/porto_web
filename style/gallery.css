@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+
+:root {
+  /* Dark Mode */
+  --main-bg-color: #050010;
+  --secondary-bg-color: #3d3055;
+  --main-text-color: #fff;
+  --nonactive-nav-text: #afafaf;
+  --gradient-color: linear-gradient(130deg, #6534f0, #fa5560);
+  --gradient-text-bg: linear-gradient(
+    81.02deg,
+    #b14bf4 -39.48%,
+    #4d91ff 130.8%
+  );
+  --title-text-margin: 8px 0;
+  --main-padding: 8px 20px;
+  --main-title-fontsize: 60px;
+  --secondary-title-fontsize: 32px;
+  --tersier-title-fontsize: 22px;
+  --paragraph-fontsize: 16px;
+  --button-height: 40px;
+  --button-width: 48;
+  --button-text-fontsize: 14px;
+  --button-text-fontweigth: semibold;
+  --button-icon-width: 24px;
+  --button-icon-text-margin: 8px;
+  --button-padding: 8px 24px;
+  --button-box-radius: 3px;
+  --icon-size: 24px;
+  --icon-padding: 44px;
+  --section-margin-bottom: 60px;
+  --sidebar-contents-width: 192px;
+  --sidebar-contents-margin: 24px;
+  --sidebar-padding: 24px;
+  /* --sidebar-nav-margin-bottom: 24px; */
+  --sidebar-margin-right: 24px;
+  --sidebar-logo-size: 32px;
+  --sidebar-icon-size: 18px;
+  --sidebar-icon-margin: 14px;
+  --status-error-color: #ff3b3c;
+  --status-warning-color: #ffad30;
+  --status-information-color: #0063f7;
+  --status-success-color: #3ac148;
+
+  /* Light Mode */
+  --light-mode-bg: #f5f8ff;
+}
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--main-text-color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  background-color: var(--main-bg-color);
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  position: fixed;
+  border-right: 1px solid var(--secondary-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: var(--sidebar-padding);
+  background-color: rgba(0, 0, 0);
+  overflow-y: auto;
+  z-index: 200;
+}
+
+.logo-side {
+  width: fit-content;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  margin-bottom: 30px;
+  /* border: 1px solid red; */
+}
+
+.logo-side i {
+  font-size: 40px;
+  line-height: 70px;
+  /* setting font color: linear gradient */
+  background: var(--gradient-color);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.logo-side h1 {
+  font-size: var(--tersier-title-fontsize);
+  letter-spacing: 4px;
+}
+
+.logo-side h1 span {
+  font-size: 23px;
+  background: var(--gradient-color);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.logo-side hr {
+  color: var(--nonactive-nav-text);
+}
+
+.side-nav {
+  height: 100%;
+  width: fit-content;
+  /* border: 1px solid red; */
+}
+
+.side-nav .starter,
+.personal-feed {
+  margin-bottom: var(--sidebar-contents-margin);
+  /* border: 1px solid red; */
+}
+
+.side-nav h3 {
+  margin-bottom: 8px;
+}
+
+.side-nav ul {
+  /* display: flex; */
+  row-gap: 50px;
+}
+
+.side-nav ul li {
+  padding: 8px 0;
+  /* border: 1px solid green; */
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: var(--nonactive-nav-text);
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+
+.sidenav-social {
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  padding: var(--sidebar-padding);
+  /* border: 1px solid red; */
+}
+/* --- Akhir Sidebar --- */
+
+/* --- Feeds Image --- */
+.feeds {
+  width: 82.4vw;
+  height: fit-content;
+  margin-left: 270px;
+  padding: var(--sidebar-padding);
+}
+
+.feeds .image-cards {
+  /* border: 1px solid red; */
+
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-card img {
+  width: 185px;
+  background-color: var(--secondary-bg-color);
+  border-radius: var(--button-box-radius);
+  /* background-color: rgba(0, 0, 0, 0.68); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  backdrop-filter: blur(44px);
+  border: 1px solid transparent;
+  background: linear-gradient(black, black) padding-box,
+    var(--gradient-color) border-box;
+}
+
+.feeds h2 {
+  height: 74px;
+  line-height: 72px;
+  margin-bottom: 30px;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+/* --- Akhir Feeds Image --- */
+
+/* --- Not Available --- */
+.not-available,
+em {
+  font-size: 11px;
+  color: #fa5560;
+}
+/* --- Akhir Not Available --- */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 500; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  padding: 20px;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--nonactive-nav-text);
+  width: 700px; /* Could be more or less, depending on screen size */
+  display: flex;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-content img {
+  /* border: 1px solid red; */
+  width: 200px;
+  margin-right: 50px;
+  margin-top: 65px;
+  background-color: var(--secondary-bg-color);
+  border-radius: 30px;
+}
+
+.modal-content .resolution-desc {
+  width: 200px;
+}
+
+.modal-content .resolution-desc {
+  text-align: center;
+}
+
+.modal-description {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.modal-description .desc {
+  width: 400px;
+  margin-bottom: 30px;
+  /* border: 1px solid yellow; */
+}
+
+.modal-description .desc h3 {
+  font-size: 15px;
+  /* border: 1px solid red; */
+}
+
+.modal-description .desc p {
+  /* border: 1px solid red; */
+  font-size: 11px;
+  width: 100%;
+  border-radius: var(--button-box-radius);
+  padding: 10px;
+  border: 1px solid var(--nonactive-nav-text);
+}
+
+/* The Close Button */
+.close {
+  color: var(--nonactive-nav-text);
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 400;
+  cursor: pointer;
+}
+
+/* .close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} */
