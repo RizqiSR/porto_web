@@ -35,7 +35,7 @@
   --button-text-fontweigth: semibold;
   --button-icon-width: 24px;
   --button-icon-text-margin: 8px;
-  --button-padding: 8px 23px;
+  --button-padding: 10px 23px;
   --button-box-radius: 3px;
   --icon-size: 24px;
   --icon-padding: 44px;
@@ -194,11 +194,10 @@ body {
   /* border: 1px solid red; */
   font-size: 20px;
   text-decoration: none;
-  /* border: 1px solid red; */
 }
 
 .header-social li {
-  padding: 5px 15px;
+  padding: 15px 15px;
   background: var(--gradient-color);
   border-radius: var(--button-box-radius);
 }
@@ -243,13 +242,11 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* border: 1px solid red; */
 }
 
 .card-btn {
   width: var(--button-width);
-  height: var(--button-height);
-  padding: 0 var(--button-padding);
+  padding: var(--button-padding);
   border-radius: var(--button-box-radius);
   border: none;
   font-size: 14px;
@@ -259,8 +256,7 @@ body {
   backdrop-filter: blur(44px);
   border: 1px solid transparent;
   background: linear-gradient(black, black) padding-box,
-    var(--gradient-color) border-box;
-  /* margin-top: ; */
+  var(--gradient-color) border-box;
 }
 
 .card-btn:hover {
